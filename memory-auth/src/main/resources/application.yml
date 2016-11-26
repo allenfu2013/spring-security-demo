@@ -1,0 +1,5 @@
+server:
+  port: 8080
+  address: localhost
+  session-timeout: 1800
+  context-path: /spring-security
