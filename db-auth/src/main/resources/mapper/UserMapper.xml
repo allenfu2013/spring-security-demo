@@ -13,8 +13,13 @@
         updated_by updatedBy
     </sql>
 
-    <select id="findByCond" resultType="org.allen.springsecurity.entity.User">
-        select <include refid="fields"/> from user where username = #{username} and password = #{password} and status = 1
+    <select id="findByNameAndPassword" resultType="org.allen.springsecurity.entity.User">
+        select <include refid="fields"/> from user
+        where username = #{username} and password = #{password} and status = 1
     </select>
 
+    <select id="getByUsername" resultType="org.allen.springsecurity.entity.User">
+        select <include refid="fields"/> from user
+        where username = #{username} and status = 1
+    </select>
 </mapper>

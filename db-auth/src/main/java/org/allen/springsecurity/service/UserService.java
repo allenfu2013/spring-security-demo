@@ -1,10 +1,8 @@
-package org.allen.springsecurity.mapper;
+package org.allen.springsecurity.service;
 
 import org.allen.springsecurity.entity.User;
 
-import java.util.Map;
-
-public interface UserMapper {
+public interface UserService {
 
     User findByNameAndPassword(User user);
 
