@@ -6,9 +6,9 @@
 <body>
 <p th:text="'Hello, ' + ${message} + '!'" />
 
-<div sec:authorize="hasRole('USER')">
-    You are authorized user! Hi, <span sec:authentication="username"/>
-</div>
+<sec:authorize ifAllGranted="USER">
+    You are authorized user! Hi, <span sec:authentication="name"/>
+</sec:authorize>
 <form th:action="@{/logout}" method="post">
     <input type="submit" value="Sign Out"/>
 </form>

@@ -21,4 +21,10 @@ public class UserServiceImpl implements UserService {
     public User getByUsername(String username) {
         return userMapper.getByUsername(username);
     }
+
+    @Override
+    public void deleteUser(long id) {
+        // TODO
+        System.out.println("##### delete user, id=" + id);
+    }
 }

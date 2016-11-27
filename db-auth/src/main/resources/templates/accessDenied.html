@@ -5,13 +5,7 @@
 </head>
 <body>
 
-<sec:authorize ifAllGranted="ADMIN">
-    You are authorized user!
-</sec:authorize>
+You have no authority!!!
 
-<form th:action="@{/logout}" method="post">
-    <input type="submit" value="Sign Out"/>
-</form>
-<script type="text/javascript" src="js/jquery-1.9.1.js"></script>
 </body>
 </html>

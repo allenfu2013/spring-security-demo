@@ -43,14 +43,18 @@ public class UserDetailsServiceImpl implements UserDetailsService {
                 accountNonExpired,
                 credentialsNonExpired,
                 accountNonLocked,
-                getAuthorities(user.getId()));
+                getAuthorities(user));
     }
 
-    private List<GrantedAuthority> getAuthorities(long userId) {
+    private List<GrantedAuthority> getAuthorities(User user) {
         // TODO get role by userId
         // TODO get authority by roleId
         List<GrantedAuthority> authList = new ArrayList<GrantedAuthority>();
-        authList.add(new SimpleGrantedAuthority("USER"));
+        // MOCK
+        if ("admin".equals(user.getUsername())) {
+            authList.add(new SimpleGrantedAuthority("delete_user"));
+        }
+
         return authList;
     }
 }
