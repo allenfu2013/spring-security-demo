@@ -4,11 +4,11 @@
     <title>Spring Security Demo</title>
 </head>
 <body>
-<p th:text="'Hello, ' + ${message} + '!'" />
 
-<div sec:authorize="hasRole('USER')">
-    You are authorized user! Hi, <span sec:authentication="username"/>
+<div sec:authorize="hasRole('ADMIN')">
+    You are authorized user!
 </div>
+
 <form th:action="@{/logout}" method="post">
     <input type="submit" value="Sign Out"/>
 </form>
