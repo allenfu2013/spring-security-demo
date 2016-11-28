@@ -1,0 +1,8 @@
+server:
+  context-path: /oauth2
+  port: 8080
+
+app:
+  client:
+    id: sso-auth-client
+    secret: mySecret
