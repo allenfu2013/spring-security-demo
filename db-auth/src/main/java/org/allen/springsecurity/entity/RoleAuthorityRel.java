@@ -1,9 +1,9 @@
 package org.allen.springsecurity.entity;
 
-public class RoleMenuRel extends BaseEntity {
+public class RoleAuthorityRel {
 
     private Long roleId;
-    private Long menuId;
+    private Long authorityId;
     private Integer status;
 
     public Long getRoleId() {
@@ -14,12 +14,12 @@ public class RoleMenuRel extends BaseEntity {
         this.roleId = roleId;
     }
 
-    public Long getMenuId() {
-        return menuId;
+    public Long getAuthorityId() {
+        return authorityId;
     }
 
-    public void setMenuId(Long menuId) {
-        this.menuId = menuId;
+    public void setAuthorityId(Long authorityId) {
+        this.authorityId = authorityId;
     }
 
     public Integer getStatus() {
