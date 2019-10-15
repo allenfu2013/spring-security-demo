@@ -12,6 +12,7 @@
         <module>db-auth</module>
         <module>oauth2-client</module>
         <module>oauth2-server</module>
+        <module>token-auth</module>
     </modules>
     <packaging>pom</packaging>
 
